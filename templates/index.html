@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Telugu Speech to ISL</title>
+</head>
+<body>
+    <h2>Speech to Sign Language (Telugu)</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="audio" required>
+        <button type="submit">Translate</button>
+    </form>
+
+    <p><b>Recognized Telugu Text:</b> {{ text }}</p>
+
+    {% for v in videos %}
+        <video width="320" controls>
+            <source src="{{ v }}" type="video/mp4">
+        </video>
+    {% endfor %}
+</body>
+</html>
